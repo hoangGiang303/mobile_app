@@ -1,6 +1,6 @@
 # mobile_app
 
-A new Flutter project 3.24.3.
+project 3.24.3.
 
 flutter pub run build_runner build
 flutter pub run intl_utils:generate

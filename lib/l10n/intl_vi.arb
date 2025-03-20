@@ -21,5 +21,6 @@
   "userName" : "Tên",
   "address" : "Địa chỉ",
   "information" : "Thông tin",
-  "language" : "Ngôn ngữ"
+  "language" : "Ngôn ngữ",
+  "change_language" : "Đổi ngôn ngữ"
 }

@@ -1,5 +1,3 @@
-
-
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,13 +7,14 @@ import 'package:mobile_app/service/service.dart';
 
 import '../../service/token_managerment.dart';
 
-class HomeController extends GetxController{
+class HomeController extends GetxController {
   late ApiService apiService = ApiService(DioConfig.createDio());
   final listAccount = <AccountModel>[].obs;
 
-  final RxnString  error = RxnString();
+  final RxnString error = RxnString();
   final RxBool isLoading = false.obs;
   final RxBool isStatusCode = false.obs;
+
   @override
   void onInit() {
     super.onInit();

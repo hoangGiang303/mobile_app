@@ -212,12 +212,12 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<void> forgotPass(Map<String, dynamic> payload) async {
+  Future<void> forgotPass(Map<String, dynamic> request) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(payload);
+    _data.addAll(request);
     final _options = _setStreamType<void>(Options(
       method: 'POST',
       headers: _headers,
@@ -238,12 +238,12 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<void> resetPass(Map<String, dynamic> payload) async {
+  Future<void> resetPass(Map<String, dynamic> request) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final _data = <String, dynamic>{};
-    _data.addAll(payload);
+    _data.addAll(request);
     final _options = _setStreamType<void>(Options(
       method: 'POST',
       headers: _headers,

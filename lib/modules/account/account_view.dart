@@ -28,13 +28,16 @@ class AccountView extends GetView<AccountController> {
                         children: [
                           Container(
                               decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                image: NetworkImage(
-                                  controller.detailAccount.value.profile?.img ?? "https://via.placeholder.com/150",
+                                image: const DecorationImage(
+                                  image: NetworkImage(
+                                    // controller
+                                    //         .detailAccount.value.profile?.img ??
+                                        "https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg",
+                                  ),
+                                  fit: BoxFit.cover,
                                 ),
-                                fit: BoxFit.cover,
+                                borderRadius: BorderRadius.circular(20),
                               ),
-                                borderRadius: BorderRadius.circular(20), ),
                               height: 80,
                               width: 80,
                               child: Container()),
@@ -67,22 +70,24 @@ class AccountView extends GetView<AccountController> {
                       ),
                       AccountInfoTile(
                         label: S.of(context).userName,
-                        value:
-                            controller.detailAccount.value.profile?.name ?? S.current.isNullValue,
+                        value: controller.detailAccount.value.profile?.name ??
+                            S.current.isNullValue,
                       ),
                       AccountInfoTile(
                         label: S.of(context).email,
-                        value: controller.detailAccount.value.username.toString(),
+                        value:
+                            controller.detailAccount.value.username.toString(),
                       ),
                       AccountInfoTile(
                         label: S.of(context).phoneNumber,
-                        value:
-                            controller.detailAccount.value.profile?.phone ?? S.current.isNullValue,
+                        value: controller.detailAccount.value.profile?.phone ??
+                            S.current.isNullValue,
                       ),
                       AccountInfoTile(
                         label: S.of(context).address,
                         value:
-                            controller.detailAccount.value.profile?.address ?? S.current.isNullValue,
+                            controller.detailAccount.value.profile?.address ??
+                                S.current.isNullValue,
                       ),
                       const SizedBox(
                         height: 10,
@@ -102,17 +107,27 @@ class AccountView extends GetView<AccountController> {
                           Get.toNamed(AppRoutes.CHANGEPASS);
                         },
                       ),
+                      const SizedBox(
+                        height: 8,
+                      ),
+                      WidgetOne(
+                        title: S.of(context).change_language,
+                        icon: Icons.translate,
+                        onTap: () {
+                          if (Get.locale?.languageCode == 'en') {
+                            Get.updateLocale(const Locale('vi'));
+                          } else {
+                            Get.updateLocale(const Locale('en'));
+                          }
+                        },
+                      ),
                     ],
                   ),
                 );
               })),
               ButtonCommon(
                 onTap: () {
-                  // if (Get.locale?.languageCode == 'en') {
-                  //   Get.updateLocale(const Locale('vi'));
-                  // } else {
-                  //   Get.updateLocale(const Locale('en'));
-                  // }
+
                   controller.logout();
                 },
                 enableIcon: false,

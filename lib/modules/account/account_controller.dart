@@ -15,7 +15,6 @@ class AccountController extends GetxController {
 
   final detailAccount = AccountModel().obs;
 
-
   @override
   void onInit() {
     getProfile();
@@ -45,7 +44,6 @@ class AccountController extends GetxController {
   Future<void> logout() async {
     isLoading.value = true;
     error.value = null;
-
     try {
       await apiService.logout();
       await TokenManager.clearTokens();
@@ -70,6 +68,4 @@ class AccountController extends GetxController {
       isLoading.value = false;
     }
   }
-
-
 }

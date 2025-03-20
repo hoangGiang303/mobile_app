@@ -21,5 +21,6 @@
   "userName" : "Name",
   "address" : "Address",
   "information" : "Information",
-  "language" : "Language"
+  "language" : "Language",
+  "change_language" : "Change language"
 }

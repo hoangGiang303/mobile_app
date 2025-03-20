@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "account": MessageLookupByLibrary.simpleMessage("Tài khoản"),
         "address": MessageLookupByLibrary.simpleMessage("Địa chỉ"),
         "changePass": MessageLookupByLibrary.simpleMessage("Đổi mật khẩu"),
+        "change_language": MessageLookupByLibrary.simpleMessage("Đổi ngôn ngữ"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "forgotPass": MessageLookupByLibrary.simpleMessage("Quên mật khẩu"),
         "goOn": MessageLookupByLibrary.simpleMessage("Tiếp tục"),
